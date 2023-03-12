@@ -1,5 +1,5 @@
 # python3
-#import os
+import os
 
 def build_heap(data):
     swaps = []
@@ -40,9 +40,8 @@ def main():
             
     elif "F" in text:
         fileName = input("Ievadiet faila nosaukumu:")
-        path = './test/'    
-        #mape = os.path.join(path, fileName)
-        mape = path + fileName
+        path = './tests/'    
+        mape = os.path.join(path, fileName)
         if "a" in fileName:
             print("Faila nosaukumā ir kļūda")
             return
