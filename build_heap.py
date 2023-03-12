@@ -3,7 +3,8 @@ import os
 
 def build_heap(data):
     swaps = []
-    for i in range(len(data)//2, -1, -1):
+    size = len(data)
+    for i in range(size//2, -1, -1):
         SiftDown(data, i, swaps)
     return swaps
 
