@@ -42,9 +42,9 @@ def main():
         fileName = input("Ievadiet faila nosaukumu:")
         path = './tests/'    
         mape = os.path.join(path, fileName)
-        #if "a" in fileName:
-         #   print("Faila nosaukumā ir kļūda")
-          #  return
+        if "a" in fileName:
+            print("Faila nosaukumā ir kļūda")
+            return
             
         else:
             try:
