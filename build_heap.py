@@ -7,7 +7,7 @@ def build_heap(data):
         SiftDown(data, i, swaps)
     return swaps
 
-def SiftDown(self, i, swaps):
+def SiftDown(data, i, swaps):
     size = len(data)
     min_index = i
     leftChild = 2 * i + 1
