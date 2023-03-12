@@ -1,14 +1,31 @@
 # python3
 
 
-def build_heap(data):
+def build_heap(self, data):
+    arrays = data
+    size = len(arrays)
     swaps = []
     # TODO: Creat heap and heap sort
     # try to achieve  O(n) and not O(n2)
-
-
     return swaps
 
+def SiftDown(self, i):
+    min_index = i
+    leftChild = 2 * i + 1
+    rightChild = 2 * i + 2 
+    if leftChild < size and arrays[leftChild] < arrays[min_index]:
+        min_index = leftChild
+    if rightChild < size and arrays[rightChild] < arrays[min_index]:
+        min_index = rightChild
+    if min_index != i:
+        swaps.append((i, min_index))
+        arrays[i], arrays[min_index] = arrays[min_index], arrays[i]
+        SiftDown(min_index)
+        
+def BuildHeap(self):
+    n = self.size
+    for i in range(n // 2 - 1, -1, -1):
+        self.SiftDown(i)
 
 def main():
     
@@ -17,11 +34,9 @@ def main():
     # first two tests are from keyboard, third test is from a file
 
 
-    # input from keyboard
     n = int(input())
     data = list(map(int, input().split()))
 
-    # checks if lenght of data is the same as the said lenght
     assert len(data) == n
 
     # calls function to assess the data 
@@ -32,7 +47,6 @@ def main():
     # this number should be less than 4n (less than 4*len(data))
 
 
-    # output all swaps
     print(len(swaps))
     for i, j in swaps:
         print(i, j)
