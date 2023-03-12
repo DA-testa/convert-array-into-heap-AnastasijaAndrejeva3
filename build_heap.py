@@ -1,5 +1,5 @@
 # python3
-
+import os
 
 def build_heap(self, data):
     arrays = data
@@ -27,30 +27,42 @@ def BuildHeap(self):
     for i in range(n // 2 - 1, -1, -1):
         self.SiftDown(i)
 
-def main():
-    
-    # TODO : add input and corresponding checks
-    # add another input for I or F 
-    # first two tests are from keyboard, third test is from a file
+def main():       
+    text = input("Ievadiet datus no tastatūras:")
+    if "I" in text:
+        n = int(input())
+        data = list(map(int, input().split()))
 
-
-    n = int(input())
-    data = list(map(int, input().split()))
-
-    assert len(data) == n
-
-    # calls function to assess the data 
-    # and give back all swaps
-    swaps = build_heap(data)
+        assert len(data) == n
+        swaps = build_heap(data)
 
     # TODO: output how many swaps were made, 
     # this number should be less than 4n (less than 4*len(data))
 
-
-    print(len(swaps))
-    for i, j in swaps:
-        print(i, j)
-
+        print(len(swaps))
+        for i, j in swaps:
+            print(i, j)
+            
+    elif "F" in text:
+        fileName = input("Ievadiet faila nosaukumu:")
+        path = './test/'    
+        mape = os.path.join(path, fileName)
+        if "a" in fileName:
+            print("Faila nosaukumā ir kļūda")
+            return
+            
+        else:
+            try:
+                with open(mape) as file:
+                    n = int(file.readline())
+                    parents = list(map(int, file.readline().split()))
+            except Exception as error:
+                print("Error", str(error))
+                return
+                  
+    else:
+        print("Ievadiet burtu 'I' vai 'F':")
+        return
 
 if __name__ == "__main__":
     main()
