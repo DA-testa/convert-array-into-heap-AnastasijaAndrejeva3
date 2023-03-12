@@ -1,31 +1,25 @@
 # python3
 import os
 
-def build_heap(self, data):
-    arrays = data
-    size = len(arrays)
+def build_heap(data):
     swaps = []
-    # TODO: Creat heap and heap sort
-    # try to achieve  O(n) and not O(n2)
+    for i in range(len(data)//2, -1, -1):
+        SiftDown(data, i, swaps)
     return swaps
 
-def SiftDown(self, i):
+def SiftDown(self, i, swaps):
+    size = len(data)
     min_index = i
     leftChild = 2 * i + 1
     rightChild = 2 * i + 2 
-    if leftChild < size and arrays[leftChild] < arrays[min_index]:
+    if leftChild < size and data[leftChild] < data[min_index]:
         min_index = leftChild
-    if rightChild < size and arrays[rightChild] < arrays[min_index]:
+    if rightChild < size and data[rightChild] < data[min_index]:
         min_index = rightChild
     if min_index != i:
         swaps.append((i, min_index))
-        arrays[i], arrays[min_index] = arrays[min_index], arrays[i]
-        SiftDown(min_index)
-        
-def BuildHeap(self):
-    n = self.size
-    for i in range(n // 2 - 1, -1, -1):
-        self.SiftDown(i)
+        data[i], data[min_index] = data[min_index], data[i]
+        SiftDown(data, min_index, swaps)
 
 def main():       
     text = input("Ievadiet datus no tastatūras:")
