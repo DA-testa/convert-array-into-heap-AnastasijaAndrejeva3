@@ -44,13 +44,11 @@ def main():
             return
             
         else:
-            try:
-                with open(mape, mode="r") as file:
-                    n = int(file.readline())
-                    parents = list(map(int, file.readline().split()))
-            except Exception as error:
-                print("Error", str(error))
-                return
+
+            with open(mape, mode="r") as file:
+                n = int(file.readline())
+                parents = list(map(int, file.readline().split()))
+
                   
     else:
         print("Ievadiet burtu 'I' vai 'F':")
