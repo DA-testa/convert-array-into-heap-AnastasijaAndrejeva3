@@ -27,6 +27,7 @@ def main():
     if "I" in text:
         n = int(input())
         data = list(map(int, input().split()))
+        assert len(data) == n
             
     elif "F" in text:
         fileName = input()
@@ -35,9 +36,9 @@ def main():
         mape = os.path.join(path, fileName)           
         with open(mape, mode="r") as file:
             n = int(file.readline())
-            parents = list(map(int, file.readline().split()))
+            data = list(map(int, file.readline().split()))
                 
-    assert len(data) == n
+    #assert len(data) == n
     swaps = build_heap(data)
             
     print(len(swaps))
