@@ -27,30 +27,21 @@ def main():
     if "I" in text:
         n = int(input())
         data = list(map(int, input().split()))
-
-        print(len(swaps))
-        for i, j in swaps:
-            print(i, j)
             
     elif "F" in text:
         fileName = input()
         path = './tests/'    
-        mape = os.path.join(path, fileName)
-        if "a" in fileName:
-            print("Faila nosaukumā ir kļūda:")
-            return
-            
-        else:
-            with open(mape, mode="r") as file:
-                n = int(file.readline())
-                parents = list(map(int, file.readline().split()))
+        mape = os.path.join(path, fileName)           
+        with open(mape, mode="r") as file:
+            n = int(file.readline())
+            parents = list(map(int, file.readline().split()))
                 
-            assert len(data) == n
-            swaps = build_heap(data)
+    assert len(data) == n
+    swaps = build_heap(data)
             
-            print(len(swaps))
-            for i, j in swaps:
-                print(i, j)
+    print(len(swaps))
+    for i, j in swaps:
+        print(i, j)
                   
     else:
         print("Ievadiet burtu 'I' vai 'F':")
