@@ -23,7 +23,7 @@ def SiftDown(data, i, swaps):
         SiftDown(data, min_index, swaps)
 
 def main():       
-    text = input("Ievadiet datus no tastatūras:")
+    text = input()
     if "I" in text:
         n = int(input())
         data = list(map(int, input().split()))
@@ -39,7 +39,7 @@ def main():
             print(i, j)
             
     elif "F" in text:
-        fileName = input("Ievadiet faila nosaukumu:")
+        fileName = input()
         path = './tests/'    
         mape = os.path.join(path, fileName)
         if "a" in fileName:
