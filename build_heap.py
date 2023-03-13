@@ -39,7 +39,7 @@ def main():
             print(i, j)
             
     elif "F" in text:
-        fileName = int(input())
+        fileName = input()
         path = './tests/'    
         mape = os.path.join(path, fileName)
         if "a" in fileName:
