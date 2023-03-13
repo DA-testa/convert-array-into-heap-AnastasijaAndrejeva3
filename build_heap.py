@@ -48,7 +48,7 @@ def main():
             
         else:
             try:
-                with open(mape) as file:
+                with open(mape, mode="r") as file:
                     n = int(file.readline())
                     parents = list(map(int, file.readline().split()))
             except Exception as error:
