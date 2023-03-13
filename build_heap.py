@@ -43,7 +43,7 @@ def main():
         path = './tests/'    
         mape = os.path.join(path, fileName)
         if "a" in fileName:
-            print("Faila nosaukumā ir kļūda")
+            print()
             return
             
         else:
@@ -56,7 +56,7 @@ def main():
                 return
                   
     else:
-        print("Ievadiet burtu 'I' vai 'F':")
+        print()
         return
 
 if __name__ == "__main__":
