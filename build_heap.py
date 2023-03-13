@@ -42,18 +42,18 @@ def main():
         fileName = input()
         path = './tests/'    
         mape = os.path.join(path, fileName)
-        if "a" in fileName:
-            print("Faila nosaukumā ir kļūda:")
-            return
+        #if "a" in fileName:
+         #   print("Faila nosaukumā ir kļūda:")
+          #  return
             
-        else:
-            try:
-                with open(mape, mode="r") as file:
-                    n = int(file.readline())
-                    parents = list(map(int, file.readline().split()))
-            except Exception as error:
-                print("Error", str(error))
-                return
+        #else:
+        try:
+            with open(mape, mode="r") as file:
+                n = int(file.readline())
+                parents = list(map(int, file.readline().split()))
+        except Exception as error:
+            print("Error", str(error))
+            return
                   
     else:
         print("Ievadiet burtu 'I' vai 'F':")
