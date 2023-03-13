@@ -38,7 +38,7 @@ def main():
         for i, j in swaps:
             print(i, j)
             
-    elif "F" in text:
+    if "F" in text:
         fileName = input()
         path = './tests/'    
         mape = os.path.join(path, fileName)
