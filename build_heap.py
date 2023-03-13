@@ -28,9 +28,6 @@ def main():
         n = int(input())
         data = list(map(int, input().split()))
 
-        assert len(data) == n
-        swaps = build_heap(data)
-
     # TODO: output how many swaps were made, 
     # this number should be less than 4n (less than 4*len(data))
 
@@ -58,6 +55,8 @@ def main():
     else:
         print("Ievadiet burtu 'I' vai 'F':")
         return
+    assert len(data) == n
+        swaps = build_heap(data)
 
 if __name__ == "__main__":
     main()
