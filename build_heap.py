@@ -1,4 +1,4 @@
-# python3
+# 221RDC028 Anastasija Andrejeva, 18.grupa
 import os
 
 def build_heap(data):
@@ -38,7 +38,6 @@ def main():
             n = int(file.readline())
             data = list(map(int, file.readline().split()))
                 
-    #assert len(data) == n
     swaps = build_heap(data)
             
     print(len(swaps))
