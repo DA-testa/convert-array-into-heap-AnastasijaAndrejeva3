@@ -53,8 +53,9 @@ def main():
     else:
         print("Ievadiet burtu 'I' vai 'F':")
         return
+    
     assert len(data) == n
-        swaps = build_heap(data)
+    swaps = build_heap(data)
 
 if __name__ == "__main__":
     main()
