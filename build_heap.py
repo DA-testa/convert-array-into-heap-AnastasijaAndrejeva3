@@ -27,11 +27,6 @@ def main():
     if "I" in text:
         n = int(input())
         data = list(map(int, input().split()))
-        assert len(data) == n
-        swaps = build_heap(data)
-
-    # TODO: output how many swaps were made, 
-    # this number should be less than 4n (less than 4*len(data))
 
         print(len(swaps))
         for i, j in swaps:
@@ -52,7 +47,10 @@ def main():
                 
             assert len(data) == n
             swaps = build_heap(data)
-
+            
+            print(len(swaps))
+            for i, j in swaps:
+                print(i, j)
                   
     else:
         print("Ievadiet burtu 'I' vai 'F':")
