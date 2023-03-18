@@ -7,7 +7,6 @@ def build_heap(data):
     for i in range(size//2, -1, -1):
         SiftDown(data, i, swaps)
     return swaps
-
 def SiftDown(data, i, swaps):
     size = len(data)
     min_index = i
@@ -21,7 +20,6 @@ def SiftDown(data, i, swaps):
         swaps.append((i, min_index))
         data[i], data[min_index] = data[min_index], data[i]
         SiftDown(data, min_index, swaps)
-
 def main():       
     text = input()
     if "I" in text:
@@ -37,9 +35,9 @@ def main():
         with open(mape, mode="r") as file:
             n = int(file.readline())
             data = list(map(int, file.readline().split()))
-                
+
     swaps = build_heap(data)
-            
+
     print(len(swaps))
     for i, j in swaps:
         print(i, j)
@@ -47,8 +45,5 @@ def main():
     else:
         print("Ievadiet burtu 'I' vai 'F':")
         return
-
-
 if __name__ == "__main__":
     main()
-    
