@@ -1,4 +1,4 @@
- #221RDC028 Anastasija Andrejeva, 18.grupa
+# 221RDC028 Anastasija Andrejeva, 18.grupa
 import os
 
 def build_heap(data):
@@ -26,27 +26,25 @@ def main():
         n = int(input())
         data = list(map(int, input().split()))
         assert len(data) == n
-
+            
     elif "F" in text:
         fileName = input()
-
+        
         path = './tests/'    
         mape = os.path.join(path, fileName)           
-        with open(mape) as file:
+        with open(mape, mode="r") as file:
             n = int(file.readline())
             data = list(map(int, file.readline().split()))
 
+    #assert len(data) == n
     swaps = build_heap(data)
 
     print(len(swaps))
     for i, j in swaps:
         print(i, j)
-
+                  
     else:
         print("Ievadiet burtu 'I' vai 'F':")
         return
-
-
 if __name__ == "__main__":
     main()
-
