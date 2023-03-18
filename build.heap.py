@@ -26,10 +26,10 @@ def main():
         n = int(input())
         data = list(map(int, input().split()))
         assert len(data) == n
-            
+
     elif "F" in text:
         fileName = input()
-        
+
         path = './tests/'    
         mape = os.path.join(path, fileName)           
         with open(mape) as file:
@@ -41,12 +41,12 @@ def main():
     print(len(swaps))
     for i, j in swaps:
         print(i, j)
-                  
+
     else:
         print("Ievadiet burtu 'I' vai 'F':")
         return
-    
-    
+
+
 if __name__ == "__main__":
     main()
 
