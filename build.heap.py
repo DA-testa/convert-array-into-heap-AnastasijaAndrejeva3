@@ -32,7 +32,7 @@ def main():
         
         path = './tests/'    
         mape = os.path.join(path, fileName)           
-        with open(mape, mode="r") as file:
+        with open(mape) as file:
             n = int(file.readline())
             data = list(map(int, file.readline().split()))
 
