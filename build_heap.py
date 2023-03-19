@@ -1,4 +1,3 @@
-
 # 221RDC028 Anastasija Andrejeva, 18.grupa
 import os
 def build_heap(data):
