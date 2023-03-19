@@ -1,6 +1,6 @@
+
 # 221RDC028 Anastasija Andrejeva, 18.grupa
 import os
-
 def build_heap(data):
     swaps = []
     size = len(data)
@@ -26,7 +26,7 @@ def main():
         n = int(input())
         data = list(map(int, input().split()))
         assert len(data) == n
-            
+
     elif "F" in text:
         fileName = input()
         
@@ -36,7 +36,6 @@ def main():
             n = int(file.readline())
             data = list(map(int, file.readline().split()))
 
-    #assert len(data) == n
     swaps = build_heap(data)
 
     print(len(swaps))
